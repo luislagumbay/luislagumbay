@@ -34,33 +34,33 @@ The Blood Donation Project is a web application designed to facilitate blood don
 
 1. **Clone the repository:**
 
-   ```bash
+   ```
    git clone https://github.com/yourusername/blood-donation.git
    cd blood-donation
    ```
 
 2. **Create a virtual environment:**
 
-   ```bash
+   ```
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
 3. **Install the required packages:**
 
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
 4. **Apply migrations:**
 
-   ```bash
+   ```
    python manage.py migrate
    ```
 
 5. **Run the development server:**
 
-   ```bash
+   ```
    python manage.py runserver
    ```
 
@@ -74,12 +74,7 @@ The Blood Donation Project is a web application designed to facilitate blood don
 - **Create Blood Requests**: After logging in, you can create blood requests through your user dashboard.
 - **Admin Access**: Admin users can manage users and blood requests from the admin dashboard.
 
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch for your feature (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a pull request.
+To install the packages listed in the requirements.txt, you can run:
+pip install -r requirements.txt
 
 
