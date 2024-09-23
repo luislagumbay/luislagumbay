@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Blood Request Details</h2>
+<p>User: {{ blood_request.user.username }}</p>
+<p>Request Type: {{ blood_request.get_request_type_display }}</p>
+<p>Blood Type: {{ blood_request.blood_type }}</p>
+<p>Region: {{ blood_request.region }}</p>
+<p>Province: {{ blood_request.province }}</p>
+<p>Municipality: {{ blood_request.municipality }}</p>
+<p>Created at: {{ blood_request.created_at }}</p>
+{% endblock %}

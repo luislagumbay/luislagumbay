@@ -1,0 +1,13 @@
+<!-- account/templates/account/profile.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ profile.user.username }}'s Profile</h2>
+<p>First Name: {{ profile.first_name }}</p>
+<p>Last Name: {{ profile.last_name }}</p>
+<p>Blood Type: {{ profile.blood_type }}</p>
+<p>Region: {{ profile.region }}</p>
+<p>Availability: {{ profile.availability }}</p>
+<!-- Add more fields as necessary -->
+<a href="{% url 'edit_profile' %}">Edit Profile</a>
+{% endblock %}

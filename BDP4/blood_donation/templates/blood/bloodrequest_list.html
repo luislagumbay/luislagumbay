@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Blood Requests</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Request Type</th>
+            <th>Blood Type</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for request in blood_requests %}
+        <tr>
+            <td>{{ request.user.username }}</td>
+            <td>{{ request.get_request_type_display }}</td>
+            <td>{{ request.blood_type }}</td>
+            <td>{{ request.region }}, {{ request.province }}, {{ request.municipality }}</td>
+            <td>
+                <a href="{% url 'blood_request_detail' request.id %}">View</a> |
+                <a href="{% url 'blood_request_edit' request.id %}">Edit</a> |
+                <a href="{% url 'blood_request_delete' request.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
